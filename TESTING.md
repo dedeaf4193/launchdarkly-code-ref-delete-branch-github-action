@@ -86,6 +86,7 @@ jobs:
           access-token: ${{ secrets.LAUNCHDARKLY_TOKEN }}
           repo: ${{ github.repository }}
           branch: ${{ github.ref_name }}
+          force: true  # Optional: force delete even on non-branch events
 ```
 
 ## 4. API Testing
@@ -99,7 +100,25 @@ curl -X POST https://app.launchdarkly.com/api/v2/code-refs/repositories/your-rep
      -d '["branch-to-delete"]'
 ```
 
-## 5. Test Scenarios
+## 5. Force Option
+
+The `force` option allows you to delete LaunchDarkly branches even when the GitHub event is not a branch delete event:
+
+- **Default behavior**: Only runs on branch delete events (`ref_type: "branch"`)
+- **With `force: true`**: Runs on any delete event (tags, branches, etc.)
+- **Use case**: Useful for cleanup workflows or manual branch deletion
+
+Example:
+```yaml
+- name: Force Delete Branch
+  uses: ./ 
+  with:
+    access-token: ${{ secrets.LAUNCHDARKLY_TOKEN }}
+    branch: "feature-branch"
+    force: true
+```
+
+## 6. Test Scenarios
 
 The test suite covers:
 
@@ -121,7 +140,7 @@ The test suite covers:
 - Network timeouts
 - Exponential backoff
 
-## 6. Debugging
+## 7. Debugging
 
 ### Enable Debug Logging
 
@@ -140,7 +159,7 @@ The action logs detailed information about:
 - Error messages
 - Retry attempts
 
-## 7. Continuous Integration
+## 8. Continuous Integration
 
 The action includes:
 - **Linting** with ESLint

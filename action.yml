@@ -19,6 +19,10 @@ inputs:
     description: 'LaunchDarkly base URI (defaults to https://app.launchdarkly.com)'
     required: false
     default: 'https://app.launchdarkly.com'
+  force:
+    description: 'Force delete even when not triggered by a branch delete event (defaults to false)'
+    required: false
+    default: 'false'
 
 runs:
   using: 'node20'

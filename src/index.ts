@@ -84,6 +84,7 @@ export async function run() {
   try {
     const token = core.getInput("access-token", { required: true });
     const baseUri = core.getInput("base-uri") || "https://app.launchdarkly.com";
+    const forceDelete = core.getBooleanInput("force");
     const ghRepoName =
       github.context?.payload?.repository?.name || process.env.GITHUB_REPOSITORY?.split("/")?.[1];
     const repoKey = core.getInput("repo") || ghRepoName;
@@ -94,8 +95,8 @@ export async function run() {
 
     if (!repoKey) throw new Error("Repository key not found");
     if (!ref) throw new Error("Branch ref not found");
-    if (github.context.eventName === "delete" && refType && refType !== "branch") {
-      core.info(`Skipping non-branch delete event (ref_type=${refType})`);
+    if (github.context.eventName === "delete" && refType && refType !== "branch" && !forceDelete) {
+      core.info(`Skipping non-branch delete event (ref_type=${refType}). Use force: true to override.`);
       return;
     }
 
