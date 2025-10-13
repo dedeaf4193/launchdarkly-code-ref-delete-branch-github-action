@@ -46,3 +46,12 @@ jobs:
         name: action-dist
         path: dist/
         retention-days: 30
+        
+    - name: Commit dist files (on release)
+      if: github.event_name == 'release'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add dist/
+        git diff --staged --quiet || git commit -m "Build: Update dist files for release ${{ github.event.release.tag_name }}"
+        git push
