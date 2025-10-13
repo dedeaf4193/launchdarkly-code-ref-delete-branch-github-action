@@ -1,5 +1,7 @@
 # LaunchDarkly Delete Branch Action
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 A GitHub Action that automatically deletes branches from LaunchDarkly Code References when they are deleted in GitHub.
 
 ## Features
@@ -188,7 +190,13 @@ npm run package
 
 ## License
 
-MIT License - see [LICENSE](LICENSE) file for details.
+Apache 2.0 - see [LICENSE](LICENSE) file for details.
+
+## LaunchDarkly Labs Disclaimer
+
+This repository is maintained by LaunchDarkly Labs. While we try to keep it 
+up to date, it is not officially supported by LaunchDarkly. For officially 
+supported SDKs and tools, visit https://launchdarkly.com
 
 ## Contributing
 
