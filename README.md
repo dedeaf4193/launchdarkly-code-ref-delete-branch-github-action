@@ -51,6 +51,37 @@ jobs:
           base-uri: https://app.launchdarkly.com
 ```
 
+### Force Delete Option
+
+The `force` option allows you to delete LaunchDarkly branches even when the GitHub event is not a branch delete event:
+
+```yaml
+name: Force Delete LaunchDarkly Branch
+on:
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Branch name to delete'
+        required: true
+
+jobs:
+  force-delete-ld-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Force Delete LaunchDarkly Code Refs Branch
+        uses: your-org/launchdarkly-delete-branch-action@v1
+        with:
+          access-token: ${{ secrets.LAUNCHDARKLY_ACCESS_TOKEN }}
+          branch: ${{ inputs.branch_name }}
+          force: true
+```
+
+**When to use `force: true`:**
+- Manual branch cleanup workflows
+- Deleting branches triggered by tag deletions
+- Cleanup scripts that run on schedule
+- Any scenario where you need to delete a LaunchDarkly branch outside of a GitHub branch delete event
+
 ## Inputs
 
 | Input | Description | Required | Default |
@@ -59,6 +90,7 @@ jobs:
 | `repo` | Repository key in LaunchDarkly | ❌ | GitHub repository name |
 | `branch` | Branch name to delete | ❌ | Deleted branch from GitHub event |
 | `base-uri` | LaunchDarkly base URI | ❌ | `https://app.launchdarkly.com` |
+| `force` | Force delete even when not triggered by a branch delete event | ❌ | `false` |
 
 ## Setup
 
