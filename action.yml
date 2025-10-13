@@ -1,0 +1,25 @@
+name: 'Delete LaunchDarkly Code Refs Branch'
+description: 'Delete a branch from LaunchDarkly Code References'
+author: 'LaunchDarkly'
+branding:
+  icon: 'trash-2'
+  color: 'red'
+
+inputs:
+  access-token:
+    description: 'LaunchDarkly API access token with Code References permissions'
+    required: true
+  repo:
+    description: 'Repository key in LaunchDarkly (defaults to GitHub repository name)'
+    required: false
+  branch:
+    description: 'Branch name to delete (defaults to the deleted branch from GitHub event)'
+    required: false
+  base-uri:
+    description: 'LaunchDarkly base URI (defaults to https://app.launchdarkly.com)'
+    required: false
+    default: 'https://app.launchdarkly.com'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
