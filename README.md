@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete LaunchDarkly Code Refs Branch
-        uses: your-org/launchdarkly-delete-branch-action@v1
+        uses: launchdarkly-labs/launchdarkly-code-ref-delete-branch-github-action@v1
         with:
           access-token: ${{ secrets.LAUNCHDARKLY_ACCESS_TOKEN }}
 ```
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete LaunchDarkly Code Refs Branch
-        uses: your-org/launchdarkly-delete-branch-action@v1
+        uses: launchdarkly-labs/launchdarkly-code-ref-delete-branch-github-action@v1
         with:
           access-token: ${{ secrets.LAUNCHDARKLY_ACCESS_TOKEN }}
           repo: my-custom-repo-key
@@ -69,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Force Delete LaunchDarkly Code Refs Branch
-        uses: your-org/launchdarkly-delete-branch-action@v1
+        uses: launchdarkly-labs/launchdarkly-code-ref-delete-branch-github-action@v1
         with:
           access-token: ${{ secrets.LAUNCHDARKLY_ACCESS_TOKEN }}
           branch: ${{ inputs.branch_name }}
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete LaunchDarkly Code Refs Branch
-        uses: your-org/launchdarkly-delete-branch-action@v1
+        uses: launchdarkly-labs/launchdarkly-code-ref-delete-branch-github-action@v1
         with:
           access-token: ${{ secrets.LAUNCHDARKLY_ACCESS_TOKEN }}
 ```
@@ -200,6 +200,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 For issues and questions:
 
-1. Check the [Issues](https://github.com/your-org/launchdarkly-delete-branch-action/issues) page
+1. Check the [Issues](https://github.com/launchdarkly-labs/launchdarkly-code-ref-delete-branch-github-action/issues) page
 2. Create a new issue with detailed information
 3. Include logs and error messages when possible
