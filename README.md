@@ -172,9 +172,11 @@ npm install
 # Build the action
 npm run build
 
-# Package for distribution
+# Package for distribution (REQUIRED before publishing)
 npm run package
 ```
+
+**Important**: The `dist/index.js` file must be created before the action can be used. This is done by running `npm run package`. The GitHub workflow will automatically build and package the action on releases.
 
 ### Scripts
 
